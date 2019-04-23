@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_menu"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="stan.devhouse.enetchell.view.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_rosterFragment"
+            app:destination="@id/rosterFragment"
+            app:exitAnim="@anim/item_animation_from_bottom"
+            app:popExitAnim="@anim/item_animation_from_bottom" />
+        <action
+            android:id="@+id/action_homeFragment_to_teamFragment"
+            app:destination="@id/teamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rosterFragment"
+        android:name="stan.devhouse.enetchell.view.roster.RosterFragment"
+        android:label="{teamName}"
+        tools:layout="@layout/roster_fragment" >
+        <action
+            android:id="@+id/action_rosterFragment_to_playerFragment"
+            app:destination="@id/playerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_in_left" />
+        <argument
+            android:name="teamName"
+            app:argType="string"/>
+        <argument
+            android:name="teamId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_rosterFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="stan.devhouse.enetchell.view.player.PlayerFragment"
+        android:label="{playerName}"
+        tools:layout="@layout/player_fragment" >
+        <argument
+            android:name="playerId"
+            app:argType="long" />
+        <argument
+            android:name="playerName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_playerFragment_to_rosterFragment"
+            app:destination="@id/rosterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamFragment"
+        android:name="stan.devhouse.enetchell.view.teams.TeamFragment"
+        android:label="team_fragment"
+        tools:layout="@layout/team_fragment" >
+        <action
+            android:id="@+id/action_teamFragment_to_rosterFragment"
+            app:destination="@id/rosterFragment" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerHamburgerStyle</item>
+        <item name="toolbarStyle">@style/ToolbarTheme</item>
+        <item name="android:actionOverflowButtonStyle">@style/ToolbarOverFlowStyle</item>
+    </style>
+
+    <style name="InfoStyle">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4</item>
+        <item name="android:fontFamily">@font/cantarell</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TitleStyle">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5</item>
+        <item name="android:fontFamily">@font/cantarell</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="DrawerHamburgerStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/cantarell</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ToolbarOverFlowStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/sort</item>
+    </style>
+
+</resources>

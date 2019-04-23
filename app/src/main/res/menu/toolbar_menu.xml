@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_sort_name"
+        android:icon="@drawable/ic_sort_24dp"
+        android:title="Name"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_sort_number"
+        android:title="Number"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_filter_by"
+        android:icon="@drawable/filter"
+        android:title="Filter By"
+        android:visible="true"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/filter_rw"
+                android:title="RW"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/filter_lw"
+                android:title="LW"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/filter_c"
+                android:title="C"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/filter_d"
+                android:title="D"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/filter_g"
+                android:title="G"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/filter_reset"
+                android:title="Reset"
+                app:showAsAction="never" />
+
+        </menu>
+
+    </item>
+
+</menu>
