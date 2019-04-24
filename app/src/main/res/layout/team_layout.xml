@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:padding="8dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="74dp"
+    android:orientation="horizontal"
+    android:padding="8dp">
 
     <TextView
         android:id="@+id/team_name_tv"
+        style="@style/TitleStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:textColor="@color/colorAccent"
-        android:layout_marginStart="16dp"
-        style="@style/TitleStyle"
-        tools:text = "New York Yankees"
-        />
+        tools:text="New York Yankees"
+        android:layout_gravity="center"
+        android:layout_weight="9"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/team_logo_iv"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        tools:src="@drawable/anaheim_ducks"
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
 
 </LinearLayout>

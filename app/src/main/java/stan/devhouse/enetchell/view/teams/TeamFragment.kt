@@ -50,7 +50,10 @@ class TeamFragment : BaseFragment(), TeamClickListener {
             if (it == null || it.isEmpty()) {
                 return@Observer
             } else {
-                adapter = TeamAdapter(it, this)
+                val sortedTeams = it.sortedBy { teams ->
+                    teams.teamName
+                }
+                adapter = TeamAdapter(this.context!!, sortedTeams.toMutableList(), this)
                 teams_rv.adapter = adapter
             }
         })
